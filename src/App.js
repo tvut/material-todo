@@ -1,24 +1,31 @@
 import logo from './logo.svg';
 import './App.css';
+import { Container } from '@mui/material';
+import AllTasks from './components/AllTasks';
+import { useState } from 'react';
+import { Header } from './components/Header';
 
 function App() {
+  const [tasks, setTasks] = useState(
+    [
+      {
+        id: 1,
+        name: "First Task",
+        time: "November 11th, 2020"
+      },
+      {
+        id: 2,
+        name: "Second Task",
+        time: "November 12th, 2020"
+      }
+    ]
+  )
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container maxWidth="sm" style={{padding:10}}>
+      <Header/>
+      <AllTasks tasks={tasks}/>
+    </Container>
   );
 }
 
