@@ -11,7 +11,10 @@
     "@testing-library/jest-dom": "^5.15.0",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
+    "body-parser": "^1.19.1",
     "date-fns": "^2.26.0",
+    "express": "^4.17.1",
+    "mongoose": "^6.1.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
@@ -40,5 +43,18 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tvut/material-todo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tvut/material-todo/issues"
+  },
+  "homepage": "https://github.com/tvut/material-todo#readme",
+  "description": ""
 }

@@ -2,7 +2,7 @@ import { Card, CardContent, Typography, Button } from "@mui/material"
 import { AddTask } from "./AddTask"
 import { useState } from "react"
 
-export const Header = () => {
+export const Header = ({onAdd}) => {
     const [add, setAdd] = useState(true)
 
     return (
@@ -14,7 +14,7 @@ export const Header = () => {
                 <Button color={add ? 'error' : 'success'} onClick={() => setAdd(!add)} variant="contained" style={{display: 'inline-block', float: 'right'}}>
                     {add ? 'Close' : 'Add Task'}
                 </Button>
-                {add && <AddTask/>}
+                {add && <AddTask onAdd={onAdd}/>}
             </CardContent>
         </Card>
     )
